@@ -24,10 +24,6 @@ def _resolve_annotation_type(annotation: Any) -> Any:
     return annotation
 
 
-def asd(t: Inject[str]) -> str:
-    return str(t)
-
-
 def _resolve_factory_dependencies(
     param_type: type,
     dependencies: dict[type, Factory],

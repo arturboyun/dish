@@ -1,5 +1,5 @@
 import inspect
-from typing import Any, Callable
+from typing import Annotated, Any, Callable
 
 from inject import Inject, inject
 
@@ -39,7 +39,7 @@ dependencies: dict[type, Callable[..., Any]] = {
 
 
 @inject(dependencies)
-def print_a(a: Inject[A]) -> None:
+def print_a(a: Annotated[A, Inject[A]]) -> None:
     a.print()
 
 
